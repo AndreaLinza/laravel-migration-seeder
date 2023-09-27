@@ -10,9 +10,8 @@ class TrainController extends Controller
     //
     public function index()
     {
-
         $dati = Train::all();
-
+        
         return view('home', ['trains'=>$dati]);
     }
 }
