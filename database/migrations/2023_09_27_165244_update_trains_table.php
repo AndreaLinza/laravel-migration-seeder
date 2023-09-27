@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::table('trains', function (Blueprint $table) {
             //
+            $table->renameColumn('codice_carrozze',"numero_carrozze");
         });
     }
 
@@ -23,6 +24,8 @@ return new class extends Migration
     {
         Schema::table('trains', function (Blueprint $table) {
             //
+            $table->renameColumn('numero_carrozze','codice_carrozze' );
+
         });
     }
 };
