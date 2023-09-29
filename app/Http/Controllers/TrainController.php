@@ -11,7 +11,7 @@ class TrainController extends Controller
     public function index()
     {
         $dati = Train::all();
-        
+        $dati = Train::where('data_odierna','>',now())->orderBy('data_odierna','asc')->get();
         return view('home', ['trains'=>$dati]);
     }
 }
